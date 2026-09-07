@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en-GB" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Long Plan — Ashmere</title>
+<meta name="description" content="Ashmere&#x27;s hundred-year plan: what was planted when, what it becomes, and what is committed to 2124.">
+<meta name="theme-color" content="#EDEFE8">
+<meta property="og:title" content="The Long Plan — Ashmere">
+<meta property="og:description" content="Ashmere&#x27;s hundred-year plan: what was planted when, what it becomes, and what is committed to 2124.">
+<meta property="og:type" content="website">
+<link rel="preload" href="assets/fonts/newsreader-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/familjen-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css">
+<script>document.documentElement.className="js";</script>
+</head>
+<body class="" data-page="long-plan">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="bar" id="bar">
+  <a class="mark" href="index.html" aria-label="Ashmere, home">
+    <svg class="mark__g" width="24" height="30" viewBox="0 0 24 30" aria-hidden="true" focusable="false">
+      <path d="M12 1.2c3.4 2.6 6.2 3.6 10.2 3.6 0 9.4-1.4 17.6-10.2 23.9C3.2 22.4 1.8 14.2 1.8 4.8 5.8 4.8 8.6 3.8 12 1.2Z"
+            fill="none" stroke="currentColor" stroke-width="1.15" stroke-linejoin="round"/>
+      <path d="M12 8.4v11M8.4 12.2 12 14.6l3.6-2.4" fill="none" stroke="currentColor"
+            stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span class="mark__w">Ashmere</span>
+  </a>
+  <nav class="bar__nav" aria-label="Primary"><ul><li><a href="house.html">The House</a></li><li><a href="gardens.html">Gardens</a></li><li><a href="meadow.html">The Meadow</a></li><li><a href="long-plan.html" aria-current="page">Long Plan</a></li><li><a href="stay.html">Stay</a></li><li><a href="kitchen.html">Farm</a></li><li><a href="occasions.html">Occasions</a></li><li><a href="journal.html">Journal</a></li><li><a href="visit.html">Visit</a></li></ul></nav>
+  <p class="openchip" id="openChip"><span class="openchip__d"></span><span id="openText">Estate open</span></p>
+  <a class="btn btn--sm" href="visit.html#plan">Plan a visit</a>
+  <button class="burger" id="burger" aria-expanded="false" aria-controls="sheet" aria-label="Open menu">
+    <span></span><span></span>
+  </button>
+</header>
+
+<div class="sheet" id="sheet" hidden>
+  <nav aria-label="Mobile"><ul><li><a href="house.html"><span>The House</span></a></li><li><a href="gardens.html"><span>Gardens & Park</span></a></li><li><a href="meadow.html"><span>The Meadow</span></a></li><li><a href="long-plan.html"><span>The Long Plan</span></a></li><li><a href="stay.html"><span>Stay</span></a></li><li><a href="kitchen.html"><span>Farm & Kitchen</span></a></li><li><a href="occasions.html"><span>Occasions</span></a></li><li><a href="journal.html"><span>Journal</span></a></li><li><a href="visit.html"><span>Visit</span></a></li></ul></nav>
+  <a class="btn btn--block" href="visit.html#plan">Plan a visit</a>
+  <p class="sheet__c">+44 1608 000 000<br>estate@ashmere.example</p>
+</div>
+
+<main id="main">
+<section class="phead phead--dusk">
+  <div class="phead__media"><video class="phead__v" muted loop playsinline preload="none" data-src="assets/media/dusk-1600.mp4" poster="assets/media/poster-dusk.webp" aria-hidden="true" tabindex="-1"></video><div class="phead__scrim"></div></div>
+  <div class="wrap phead__in">
+    <p class="eyebrow reveal">The Long Plan</p>
+    <h1 class="phead__h reveal">Costed to 2124, which is the point.</h1>
+    <p class="lede reveal">Everything the trust commits to is priced to the end of the next century. If we cannot fund a thing that far ahead, we do not begin it. Drag through five and a half centuries and watch the estate arrive.</p>
+    
+  </div>
+</section>
+<section class="band band--tight" id="scale">
+  <div class="wrap">
+    <div class="plan">
+      <div class="plan__stage">
+        <svg id="planSvg" viewBox="0 56 900 324" role="img"
+             aria-label="The estate through time. Trees and buildings appear at the year they were planted or built and mature as the scale advances.">
+          <defs>
+            <linearGradient id="skyG" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#DDE4EC"/><stop offset="100%" stop-color="#EDEFE8"/>
+            </linearGradient>
+          </defs>
+          <rect width="900" height="380" fill="url(#skyG)"/>
+          <g id="planGround"></g><g id="planTrees"></g><g id="planBuild"></g><g id="planNear"></g><g id="planTags"></g>
+        </svg>
+      </div>
+      <div class="plan__scale">
+        <div class="plan__yearrow">
+          <span class="plan__year" id="planYear">2026</span>
+          <span class="plan__tense" id="planTense">today</span>
+        </div>
+        <input id="planTime" type="range" min="1560" max="2124" step="1" value="2026"
+               aria-label="Year" aria-describedby="planNote">
+        <ol class="plan__ticks" id="planTicks"></ol>
+      </div>
+      <div class="plan__note" id="planNote" aria-live="polite">
+        <h2 id="planTitle">Where we are now</h2>
+        <p id="planBody">Two hundred and forty acres under restoration, nine hundred trees planted in the last decade.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band band--park">
+  <div class="wrap two">
+    <div class="two__l"><p class="eyebrow reveal">The endowment</p>
+      <h2 class="reveal">It covers the roof, the yews and the oaks. Nothing else.</h2></div>
+    <div class="two__r">
+      <p class="lede reveal">Settled in 2011 and deliberately narrow. It is sized to keep the
+        fabric and the two plantings that cannot be replaced, in perpetuity, at a 2.8 per cent
+        real draw.</p>
+      <p class="reveal">It does not cover the café, the shop, the events diary or the staff who
+        run them. Those pay for themselves or they stop, and one of them has stopped. Keeping the
+        endowment narrow is what makes the hundred-year number believable rather than a slogan.</p>
+      <dl class="facts facts--inv reveal">
+        <div><dt>Real draw</dt><dd>2.8%</dd></div>
+        <div><dt>Covers</dt><dd>Fabric only</dd></div>
+        <div><dt>Settled</dt><dd>2011</dd></div>
+        <div><dt>Horizon</dt><dd>2124</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__top">
+    <div class="foot__brand">
+      <p class="foot__mk">Ashmere</p>
+      <p class="foot__tag">A Grade&nbsp;I house, 2,400 acres in the Welbury valley, Oxfordshire,<br>
+        and a plan that runs to 2124.</p>
+      <a class="btn btn--ghost" href="visit.html#plan">Plan a visit</a>
+    </div>
+    <div class="foot__cols">
+      <div><h2>The estate</h2><ul><li><a href="house.html">The House</a></li><li><a href="gardens.html">Gardens & Park</a></li><li><a href="meadow.html">The Meadow</a></li><li><a href="long-plan.html">The Long Plan</a></li><li><a href="stay.html">Stay</a></li></ul></div>
+      <div><h2>More</h2><ul><li><a href="kitchen.html">Farm & Kitchen</a></li><li><a href="occasions.html">Occasions</a></li><li><a href="journal.html">Journal</a></li><li><a href="visit.html">Visit</a></li></ul></div>
+      <div><h2>Reach us</h2><ul>
+        <li><a href="tel:+441608000000">+44 1608 000 000</a></li>
+        <li><a href="mailto:estate@ashmere.example">estate@ashmere.example</a></li>
+        <li><span>Welbury valley, Oxfordshire</span></li>
+        <li><span>Estate office 09:00 – 17:00</span></li>
+      </ul></div>
+    </div>
+  </div>
+  <div class="wrap foot__base">
+    <p>© 2026 The Ashmere Estate Trust</p>
+    <p class="foot__fine">Concept site. Ashmere is a fictional estate; the meadow footage is
+      the single asset supplied with the brief, counter-panned, regraded and reframed for each page.</p>
+  </div>
+</footer>
+
+<script src="assets/js/site.js" defer></script>
+<script>window.ASH_PLAN=1;</script>
+</body>
+</html>

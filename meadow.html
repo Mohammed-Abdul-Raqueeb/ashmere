@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en-GB" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Meadow — Ashmere</title>
+<meta name="description" content="Thirty years of hay-meadow restoration, surveyed by quadrat, cut once a year in late July.">
+<meta name="theme-color" content="#EDEFE8">
+<meta property="og:title" content="The Meadow — Ashmere">
+<meta property="og:description" content="Thirty years of hay-meadow restoration, surveyed by quadrat, cut once a year in late July.">
+<meta property="og:type" content="website">
+<link rel="preload" href="assets/fonts/newsreader-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/familjen-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css">
+<script>document.documentElement.className="js";</script>
+</head>
+<body class="" data-page="meadow">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="bar" id="bar">
+  <a class="mark" href="index.html" aria-label="Ashmere, home">
+    <svg class="mark__g" width="24" height="30" viewBox="0 0 24 30" aria-hidden="true" focusable="false">
+      <path d="M12 1.2c3.4 2.6 6.2 3.6 10.2 3.6 0 9.4-1.4 17.6-10.2 23.9C3.2 22.4 1.8 14.2 1.8 4.8 5.8 4.8 8.6 3.8 12 1.2Z"
+            fill="none" stroke="currentColor" stroke-width="1.15" stroke-linejoin="round"/>
+      <path d="M12 8.4v11M8.4 12.2 12 14.6l3.6-2.4" fill="none" stroke="currentColor"
+            stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span class="mark__w">Ashmere</span>
+  </a>
+  <nav class="bar__nav" aria-label="Primary"><ul><li><a href="house.html">The House</a></li><li><a href="gardens.html">Gardens</a></li><li><a href="meadow.html" aria-current="page">The Meadow</a></li><li><a href="long-plan.html">Long Plan</a></li><li><a href="stay.html">Stay</a></li><li><a href="kitchen.html">Farm</a></li><li><a href="occasions.html">Occasions</a></li><li><a href="journal.html">Journal</a></li><li><a href="visit.html">Visit</a></li></ul></nav>
+  <p class="openchip" id="openChip"><span class="openchip__d"></span><span id="openText">Estate open</span></p>
+  <a class="btn btn--sm" href="visit.html#plan">Plan a visit</a>
+  <button class="burger" id="burger" aria-expanded="false" aria-controls="sheet" aria-label="Open menu">
+    <span></span><span></span>
+  </button>
+</header>
+
+<div class="sheet" id="sheet" hidden>
+  <nav aria-label="Mobile"><ul><li><a href="house.html"><span>The House</span></a></li><li><a href="gardens.html"><span>Gardens & Park</span></a></li><li><a href="meadow.html"><span>The Meadow</span></a></li><li><a href="long-plan.html"><span>The Long Plan</span></a></li><li><a href="stay.html"><span>Stay</span></a></li><li><a href="kitchen.html"><span>Farm & Kitchen</span></a></li><li><a href="occasions.html"><span>Occasions</span></a></li><li><a href="journal.html"><span>Journal</span></a></li><li><a href="visit.html"><span>Visit</span></a></li></ul></nav>
+  <a class="btn btn--block" href="visit.html#plan">Plan a visit</a>
+  <p class="sheet__c">+44 1608 000 000<br>estate@ashmere.example</p>
+</div>
+
+<main id="main">
+<section class="phead phead--light">
+  
+  <div class="wrap phead__in">
+    <p class="eyebrow reveal">The Meadow</p>
+    <h1 class="phead__h reveal">The most valuable thing here is a field, and it is free.</h1>
+    <p class="lede reveal">Ninety-eight hectares of restored hay meadow, begun in 1994 with green hay from a surviving meadow eight miles away. It is cut once a year and grazed after, and that is the entire management.</p>
+    
+  </div>
+</section>
+<section class="band band--park" id="quadrat">
+  <div class="wrap">
+    <header class="head head--inv">
+      <div><p class="eyebrow reveal">Survey</p><h2 class="reveal">Drop a quadrat anywhere.</h2></div>
+      <p class="lede reveal">This is how a meadow is actually measured: a one-metre frame, thrown
+        or placed, and everything inside it written down. Move ours around the south meadow and
+        see what the 2025 survey found.</p>
+    </header>
+    <div class="quad">
+      <figure class="quad__map">
+        <svg id="quadSvg" viewBox="0 0 720 500" role="img"
+             aria-label="Plan of the south meadow. Move the survey frame to read the species recorded at that point.">
+          <defs><linearGradient id="mg" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#2C5330"/><stop offset="100%" stop-color="#1D3D25"/>
+          </linearGradient></defs>
+          <rect width="720" height="500" fill="url(#mg)"/>
+          <g id="quadZones"></g><g id="quadPaths"></g><g id="quadLabels"></g><g id="quadFrame"></g>
+        </svg>
+        <figcaption class="quad__cap">South meadow, 14 hectares. Darker ground is older
+          restoration; the 1994 block is richest because it has had thirty seasons of seed return.</figcaption>
+      </figure>
+      <div class="quad__panel">
+        <div class="quad__read">
+          <span class="quad__n" id="quadCount">0</span>
+          <span class="quad__u">species in this square metre</span>
+        </div>
+        <p class="quad__zone" id="quadZone">—</p>
+        <ul class="quad__list" id="quadList" aria-live="polite"></ul>
+        <div class="quad__ctl">
+          <label class="f"><span>Across</span>
+            <input id="quadX" type="range" min="60" max="660" step="2" value="300"></label>
+          <label class="f"><span>Up</span>
+            <input id="quadY" type="range" min="60" max="440" step="2" value="250"></label>
+        </div>
+        <p class="quad__note">Drag on the map, or use the two controls. Counts are the mean of
+          five 2025 quadrats in each block.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap two">
+    <div class="two__l"><p class="eyebrow reveal">The cut</p>
+      <h2 class="reveal">Once, in the last week of July.</h2></div>
+    <div class="two__r">
+      <p class="lede reveal">Not before, because the yellow rattle has to set and drop. Not after,
+        because the sward goes over and the aftermath will not come. One date, and it decides the
+        next hundred years.</p>
+      <p class="reveal">The hay is lifted within four days and goes to the dairy. Cattle come on
+        in the middle of August and stay until the ground turns, treading seed in as they go. Then
+        nothing at all until the following July.</p>
+      <ol class="steps reveal">
+        <li><b>May to July</b><p>Left entirely alone. Paths mown, everything else standing.</p></li>
+        <li><b>Last week of July</b><p>Cut, turned twice, baled and lifted inside four days.</p></li>
+        <li><b>Mid-August to October</b><p>Aftermath grazing. Roughly one cow to the hectare.</p></li>
+        <li><b>November to April</b><p>Nothing. No feeding, no topping, no rolling.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__top">
+    <div class="foot__brand">
+      <p class="foot__mk">Ashmere</p>
+      <p class="foot__tag">A Grade&nbsp;I house, 2,400 acres in the Welbury valley, Oxfordshire,<br>
+        and a plan that runs to 2124.</p>
+      <a class="btn btn--ghost" href="visit.html#plan">Plan a visit</a>
+    </div>
+    <div class="foot__cols">
+      <div><h2>The estate</h2><ul><li><a href="house.html">The House</a></li><li><a href="gardens.html">Gardens & Park</a></li><li><a href="meadow.html">The Meadow</a></li><li><a href="long-plan.html">The Long Plan</a></li><li><a href="stay.html">Stay</a></li></ul></div>
+      <div><h2>More</h2><ul><li><a href="kitchen.html">Farm & Kitchen</a></li><li><a href="occasions.html">Occasions</a></li><li><a href="journal.html">Journal</a></li><li><a href="visit.html">Visit</a></li></ul></div>
+      <div><h2>Reach us</h2><ul>
+        <li><a href="tel:+441608000000">+44 1608 000 000</a></li>
+        <li><a href="mailto:estate@ashmere.example">estate@ashmere.example</a></li>
+        <li><span>Welbury valley, Oxfordshire</span></li>
+        <li><span>Estate office 09:00 – 17:00</span></li>
+      </ul></div>
+    </div>
+  </div>
+  <div class="wrap foot__base">
+    <p>© 2026 The Ashmere Estate Trust</p>
+    <p class="foot__fine">Concept site. Ashmere is a fictional estate; the meadow footage is
+      the single asset supplied with the brief, counter-panned, regraded and reframed for each page.</p>
+  </div>
+</footer>
+
+<script src="assets/js/site.js" defer></script>
+<script>window.ASH_QUAD=1;</script>
+</body>
+</html>
